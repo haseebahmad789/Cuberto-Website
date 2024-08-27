@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuberto Website</title>
+    <link rel="shortcut icon" href="https://cuberto.com/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader  d-flex">
+        <div class="text-loader text-1">1</div>
+        <div class="text-loader text-2">2</div>
+        <div class="text-loader text-3">3</div>
+        <div class="text-loader text-4">4</div>
+        <div class="text-loader text-5">5</div>
+        <div class="text-loader text-6">6</div>
+        <div class="text-loader text-7">7</div>
+        <div class="text-loader text-8">8</div>
+        <div class="text-loader text-9">9</div>
+        <div class="text-loader text-10">10</div>
+        <div class="text-loader text-30">30</div>
+        <div class="text-loader text-55">55</div>
+        <div class="text-loader text-70">70</div>
+        <div class="text-loader text-85">85</div>
+        <div class="text-loader text-92">92</div>
+        <div class="text-loader text-100">100</div>
+    </div>   
+    
+    <div class="cursor"></div>
+
+    <div id="main">
+        <div class="page1">
+            <nav>
+                <div class="logo">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAC/CAMAAAA1kLK0AAAAclBMVEX///8AAABZWVktLS06Ojpqamr19fWFhYX6+vrW1tYwMDBmZmbQ0NDv7++RkZHc3Nx7e3uLi4urq6tKSkoRERHl5eW9vb11dXWXl5coKCh+fn7i4uJQUFCnp6fExMSysrJDQ0NeXl4hISGdnZ0ZGRkUFBTp373UAAAE3UlEQVR4nO2aa3erKhCGNc3NXMz9amPSpPv//8VThQEUPM3u0ayetZ7nk2FwGF4QBtooAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeD3ZomDYiq/S1aIVV6/nFBfMWvG1LX214ur19FsU4g0hFAihQQgNQmgQQoMQml8nxLzgybpWiPl+fV3vxg0u14XxG1//KsQ8ecJDmySHexnP6WjSxeVpMpmcDrbOcDspStJIhEiiy2esGOSey+FRuYy3Z6cng8LrthAuSY+TYyRCHFPBcbFWiVv8Z/oiLRab2LKSkMtfU1trqOyjSIQ4O2/Fb1nV58o1fpgp01Pjny1NW29xFeNh75a+RIq0GsldfSDfC1Hj6ric32tG6YcSYuCI3iDE8KNWvu9ch1VcZ/YjIRwlZr4xc4UQmoUYf8Z11i/XIY6HPxLCKDEMGbO/EmIS8NDOLtXEPtBifPuZEPIB3EK2SUCIUZMQo6D7ds79YcbSyCop9kKJavGsEIfFMMpyWWw3ZcW1/rUtP+tcZLnUhEjzZGeEyBKhqDV3o9pdt9JYh0IcVRM3WczKD+W9WC6fEWIriUeuC8rZq+PuRa5PPdZGiIdYQ3nEQXsQ9w/9Uodbh9bBFqxkVXpCiE87V3Pbeb1SflR8ikoihN0DAkLMa0qaD3gVdYWO380oB/rHE0IkzmupGXU9nG62qRKjc2SEOFpbQIi1H9VH7FdrEzVWy5DpeyEGlfrK+rW4bKpTv0DpfY+MEI4tIMSqLpaZJA25/H/nYOasx/dCVNNq5Wod3jtN93vGhxAQ4haIatIcaRtMvDlo+F6IalQyjM8I4WaJASE2fpF2n0QdEbctxOMpIdwGnxTi+CuFCM3TvxHC/dR/hxCDnwmx9Ca41P+pEJUeKiGqx9m+X61NVPTB7VmZnL1cJ6HFhcGxLlLk7RrXKIgvxM3IWysK7RqdLZbX0v3dDUyeB2YUNbmNRedM7pjpFPXr7XP9xa8s2Tz5QqR+de3LPVqM/FqtslP+nSR+JmOp8yI7sjqLKjdN9fjuOepHRiXHZ2q9+EIsPF/iwc8s3Uot816LemaaU5Ml/iMLiBylyh9LHZj0SPdGLRsn+w2VFAP8rt34QojATre1zjYqOSJ3eCUhVyincpqPR3b6m3NpYnpToBYGczwsj5RzOTVvK2H3S1lmqu9blX4FhJAQtmU3E7cx5SE7SGvd6eAcBye9nj0jFxa5T4vvrkUvV/Y6Z9N7qxv7jtE8uvcR1Ux5aur0eieVm9+dIntH07AAt0NwtyvHZhyymPNF/T6l4KxtWejNeaMQ45NXMXDX1+11ROTMcos+MCWBYOx7/mWa3U4DSuikIySErLRufy++h1NnJy6Np8RFLP41nrNhjutz4uz4XNRvsSX5CgoRjSvVyw9sXXMQb7rWITI7vxuHojYnNtXXjhVj7QOu3DpOTUoQFqL2J4WyJKvefKbeK10ws2HXdqiHDeXmpXWZCf+Uen3bGePUSYw3DUJE85XMiqkc72dWitULpoMmfyyXh2sgl5+tl8vCFL4vzC9ftn3D/4It8muaB7Lihl4t8sdhX7nkGOdF25f/67+aAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/FL+AV/RMro15Pj6AAAAAElFTkSuQmCC">
+                </div>
+
+                <div class="menu">
+                    <h3>menu</h3>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="open">
+                    <div class="open-content">
+                        <i class="fa-solid fa-xmark"></i>
+
+                        <div class="text-div">
+                            <h1>What we do</h1>
+                            <h1>What we do</h1>
+                        </div>
+
+                        <div class="text-div">
+                            <h1>Projects</h1>
+                            <h1>Projects</h1>
+                        </div>
+
+                        <div class="text-div">
+                            <h1>Company</h1>
+                            <h1>Company</h1>
+                        </div>
+
+                        <div class="text-div">
+                            <h1>Tutorials</h1>
+                            <h1>Tutorials</h1>
+                        </div>
+
+                        <div class="text-div">
+                            <h1>Contact</h1>
+                            <h1>Contact</h1>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="title">
+                <h2>We are a digital <br> <video autoplay muted loop src="assets/Title video.mp4"></video><em>design</em> and <br> motion agency</h2>
+            </div>
+        </div>
+
+
+        <div class="page2">
+            <div class="playCursor"><i class="fa-solid fa-play"></i></div>
+            <video autoplay muted loop src="assets/Page2-video.mp4"></video>
+        </div>
+
+        <div class="page3">
+            <video autoplay muted loop src="assets/Page3-video.mp4"></video>
+
+            <div class="page3-content">
+                <h3>Cuberto is a leading digital product <br> agency focused on branding, UI/UX <br> design,mobile, and web <br> development.</h3>
+
+                <div class="button"><a href="#">What we do</a></div>
+            </div>
+        </div>
+
+
+        <div class="page4">
+            <h1>Featured <br> <video autoplay muted loop src="assets/Projects-title.mp4"></video><em>projects</em></h1>
+
+            <div class="container">
+                <div class="item project1">
+                    <img src="assets/Project1-img.jpg">
+                    <video autoplay muted loop src="assets/Project1-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>Punto Pago</b><i>  – The First Super-App in Latin America</i>
+                    </div>
+                </div>
+                <div class="item project1 down">
+                    <img src="assets/Project2-img.jpg">
+                    <video autoplay muted loop src="assets/Project2-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>Kelvin Zero</b><i> – A digital product for passwordless authentication</i>
+                    </div>
+                </div>
+                <div class="item project1">
+                    <img src="assets/Project3-img.jpg">
+                    <video autoplay muted loop src="assets/Project3-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>Riyadh</b><i> – Official website of Riyadh, Saudi Arabia's capital</i>
+                    </div>
+                </div>
+                <div class="item down project1">
+                    <img src="assets/Project4-img.jpg">
+                    <video autoplay muted loop src="assets/Project4-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>Magma</b><i> – The ultimate tool for building in the Web3 era</i>
+                    </div>
+                </div>
+                <div class="item project1">
+                    <img src="assets/Project5-img.jpg">
+                    <video autoplay muted loop src="assets/Project5-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>Qvino</b><i> – Wine marketplace with interactive learning</i>
+                    </div>
+                </div>
+                <div class="item  project1 down">
+                    <img src="assets/Project6-img.jpg">
+                    <video autoplay muted loop src="assets/Project6-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>FlipaClip</b><i> – The best tool for stop-motion animation</i>
+                    </div>
+                </div>
+                <div class="item project1">
+                    <img src="assets/Project7-img.jpg">
+                    <video autoplay muted loop src="assets/Project7-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>Zelt</b><i> – Run HR, IT & Finance in one place</i>
+                    </div>
+                </div>
+                <div class="item project1 project8 down">
+                    <img src="assets/Project8-img.jpg">
+                    <video autoplay muted loop src="assets/Project8-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>Potion</b><i> – Sales tool for increasing conversions</i>
+                    </div>
+                </div>
+                <div class="item project1">
+                    <img src="assets/Project9-img.jpg">
+                    <video autoplay muted loop src="assets/Project9-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>Cisco</b><i> – Cloud based network management</i>
+                    </div>
+                </div>
+                <div class="item project1 down">
+                    <img src="assets/Project10-img.jpg">
+                    <video autoplay muted loop src="assets/Project10-video.mp4"></video>
+        
+                    <div class="project1-content">
+                        <b>Ferrumpipe</b><i> – Galvanized steel metal frame manufacturer</i>
+                    </div>
+                </div>
+                <div class="color"></div>
+            </div>
+        </div>
+
+        <div class="page5">
+            <h1>Our</h1>
+            <em>philosophy</em>
+
+            <div class="page5-content">
+                <video autoplay muted loop src="assets/Philosophy-video.mp4"></video>
+
+                <div class="page5-right">
+                    <h4>In our team, developers work alongside <br> designers, strategists and analysts. <br> Cuberto doesn't do cookie-cutter <br> solutions and we build products exactly <br> as they were during the design phase, no <br> short cuts or simplifications.</h4>
+
+                    <h4>We're driven by user‑centered design <br> that drives productivity and increases <br> revenue. Our expertise and ingenuity are <br> remarkable, yet we always strive to outdo <br> and outperform our previous <br> achievements.</h4>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page6">
+            <h1>Development <br> and design</h1>
+            <i>resources</i>
+
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/Drag1(1).png">
+
+                    <h4>How To Make Epic Website // Frontend development</h4>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Drag1(2).png">
+                    <h4>Cuberto Mouse Follower</h4>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Drag1(3).jpg">
+                    <h4>Making switch with SVG Distortion Effect</h4>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Drag1(4).png">
+                    <h4>UI/UX Design Tips / Volume 9</h4>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Drag1(5).png">
+                    <h4>Liquid navigation in After Effects</h4>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Drag1(6).png">
+                    <h4>How to prepare your design portfolio on Behance</h4>
+                </div>
+                </div>
+            </div>
+
+            <div class="resources">
+                <div class="left"></div>
+                <div class="right">
+                    <h4>We regularly release design courses, <br> offer advice to newbie designers, walk <br> you through creating awesome effects, <br> and share source files.</h4>
+
+                    <div class="view">
+                        <h4>VIEW OUR RESOURCES</h4>
+                        <h4>VIEW OUR RESOURCES</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page7">
+            <div class="moving-div">
+                <div class="move">
+                    <h1>New Day —&nbsp</h1>
+
+                    <em>New Inspo</em>
+                    <video autoplay muted loop src="assets/New.mp4"></video>
+                </div>
+
+                <div class="move">
+                    <h1>New Day —&nbsp</h1>
+
+                    <em>New Inspo</em>
+                    <video autoplay muted loop src="assets/New.mp4"></video>
+                </div>
+
+                <div class="move">
+                    <h1>New Day —&nbsp</h1>
+
+                    <em>New Inspo</em>
+                    <video autoplay muted loop src="assets/New.mp4"></video>
+                </div>
+
+                <div class="move">
+                    <h1>New Day —&nbsp</h1>
+
+                    <em>New Inspo</em>
+                    <video autoplay muted loop src="assets/New.mp4"></video>
+                </div>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)2.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)4.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)5.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)6.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)7.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)8.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)9.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Drag(2)10.jpg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="page8">
+            <div class="moving-div">
+                <div class="move">
+                    <h1>Follow Us —&nbsp</h1>
+
+                    <em>Follow Us</em>
+                    <video autoplay muted loop src="assets/Follow.mp4"></video>
+                </div>
+
+                <div class="move">
+                    <h1>Follow Us —&nbsp</h1>
+
+                    <em>Follow Us</em>
+                    <video autoplay muted loop src="assets/Follow.mp4"></video>
+                </div>
+
+                <div class="move">
+                    <h1>Follow Us —&nbsp</h1>
+
+                    <em>Follow Us</em>
+                    <video autoplay muted loop src="assets/Follow.mp4"></video>
+                </div>
+
+                <div class="move">
+                    <h1>Follow Us —&nbsp</h1>
+
+                    <em>Follow Us</em>
+                    <video autoplay muted loop src="assets/Follow.mp4"></video>
+                </div>
+            </div>
+
+
+            <div class="hover-container">
+                <div class="elem1">
+                    <div class="overlay"></div>
+                    <h3>Instagram</h3>
+                </div>
+
+                <div class="elem1">
+                    <div class="overlay"></div>
+                    <h3>Linkedin</h3>
+                </div>
+
+                <div class="elem1">
+                    <div class="overlay"></div>
+                    <h3>Dribble</h3>
+                </div>
+
+                <div class="elem1">
+                    <div class="overlay"></div>
+                    <h3>Github</h3>
+                </div>
+
+                <div class="elem1">
+                    <div class="overlay"></div>
+                    <h3>Youtube</h3>
+                </div>
+
+                <div class="elem1">
+                    <div class="overlay"></div>
+                    <h3>Behance</h3>
+                </div>
+
+                <div class="elem1">
+                    <div class="overlay"></div>
+                    <h3>Twitter</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page9">
+            <video autoplay muted loop src="assets/Ropes.mp4"></video>
+
+            <div class="page9-content">
+                <h1>Have</h1>
+                <em>an idea?</em>
+                <div class="page9-button"><a href="#">TELL US</a></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
